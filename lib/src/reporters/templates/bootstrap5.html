@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="d-flex ms-2 flex-grow-1">
+            <div class="navbar-brand">
+                Cucumber <span class="lead">Dart</span>
+            </div>
+        </div>
+
+        <div class="row me-2">
+            <div class="col">
+                <div class="text-nowrap text-white">
+                    <h3>
+                        <div class="rounded bg-success p-1 px-2">
+                            Passed: <span id="passedCount"></span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-nowrap text-white">
+                    <h3>
+                        <div class="rounded bg-danger p-1 px-2">
+                            Failure: <span id="failureCount"></span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <!-- CHARTS -->
+    <div class="container">
+        <div class="card-group shadow mt-3">
+            <div class="card">
+                <h5 class="card-header">
+                    Feature chart
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Total features: <span id="countFeatures"></span></li>
+                        <li class="list-group-item">Total time (hh:mm:ss): 00:12:23</li>
+                        <li class="list-group-item">Total time (hh:mm:ss): 00:12:23</li>
+                        <li class="list-group-item">Total time (hh:mm:ss): 00:12:23</li>
+                    </ul>
+                    <div id="fatureChart"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h5 class="card-header">
+                    Scenario chart
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Total scenarios: <span id="countScenarios"></span></li>
+                        <li class="list-group-item">Total time (hh:mm:ss): 00:12:23</li>
+                    </ul>
+                    <div id="scenarioChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /CHARTS -->
+
+    <!-- METADATA -->
+    <div class="container mt-3">
+        <div class="accordion shadow" id="metadataAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Metadata
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#metadataAccordion">
+                    <div class="accordion-body">
+                        <dl class="row">
+                            <dt class="col-sm-3">App version</dt>
+                            <dd class="col-sm-9">1.0.3</dd>
+
+                            <dt class="col-sm-3">Build number</dt>
+                            <dd class="col-sm-9">34</dd>
+
+                            <dt class="col-sm-3">Target Device</dt>
+                            <dd class="col-sm-9">Pixel 5</dd>
+
+                            <dt class="col-sm-3">Target Platform</dt>
+                            <dd class="col-sm-9">Android 12</dd>
+
+                            <dt class="col-sm-3">Test enviroment</dt>
+                            <dd class="col-sm-9">Mock</dd>
+
+                            <dt class="col-sm-3">Executed</dt>
+                            <dd class="col-sm-9">Local (Windows 11)</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /METADATA -->
+
+    <!-- FEATURES -->
+    <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-0" role="button"
+                        aria-expanded="false" aria-controls="feature-0">
+                        FEATURE #0
+                    </div>
+                    <div class="collapse" id="feature-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-1" role="button"
+                        aria-expanded="false" aria-controls="feature-1">
+                        <span class="badge bg-secondary">@happy</span>
+                        <span class="badge bg-secondary">@reporting</span>
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Проверка авторизации пользователя</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-1">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Опциональное описание фичи
+                            </p>
+                            <div class="card">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-0-feat-1"
+                                    role="button" aria-expanded="false" aria-controls="scenario-0-feat-1">
+                                    <span class="badge bg-secondary">@happy</span>
+                                    <span class="badge bg-secondary">@reporting</span>
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Проверка на успешную авторизацию пользователя</span>
+                                        </h5>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="scenario-0-feat-1">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                <span class="text-primary">Когда</span> Я ввожу номер телефона
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">23ms</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="badge bg-warning">
+                                                    <i class="bi bi-skip-forward"></i>
+                                                </span>
+                                                <span class="text-primary">И</span> Я нажимаю кнопку войти
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="badge bg-danger">
+                                                    <i class="bi bi-x-lg"></i>
+                                                </span>
+                                                <span class="text-primary">Тогда</span> Я вижу главный экран
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">3ms</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /FEATURES -->
+
+    <!-- FOOTER -->
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a class="btn btn-outline-secondary" target="_blank" role="button" href="https://github.com/jonsamwell/dart_gherkin">
+                <i class="bi bi-github"></i>
+                GitHub
+            </a>
+
+            <a class="btn btn-outline-primary" target="_blank" href="https://pub.dev/packages/gherkin">
+                <i class="bi bi-box"></i>
+                Pub.dev
+            </a>
+            <a class="btn btn-outline-success" target="_blank" href="https://cucumber.io/docs/gherkin/reference/">
+                <i class="bi bi-code-slash"></i>
+                Cucumber
+            </a>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <script>
+        var dataFatures = [{
+            values: [7, 2],
+            labels: ['Passed', 'Failure'],
+            type: 'pie',
+            marker: {
+                colors: [
+                    '#4EA429',
+                    '#BF3030'
+                ],
+            },
+        }];
+
+        var dataScenarios = [{
+            values: [15, 4, 2],
+            labels: ['Passed', 'Pending', 'Skipped'],
+            type: 'pie',
+            marker: {
+                colors: [
+                    '#4EA429',
+                    '#5BC0DE',
+                    '#F0AD4E'
+                ],
+            },
+        }];
+
+        var config = {
+            responsive: true
+        };
+
+        Plotly.newPlot('fatureChart', dataFatures, {}, config);
+
+        document.getElementById('countFeatures').textContent = dataFatures[0].values.reduce((a, b) => a + b, 0);
+        document.getElementById('passedCount').textContent = dataFatures[0].values[0];
+        document.getElementById('failureCount').textContent = dataFatures[0].values[1];
+
+        Plotly.newPlot('scenarioChart', dataScenarios, {}, config);
+        document.getElementById('countScenarios').textContent = dataScenarios[0].values.reduce((a, b) => a + b, 0);
+    </script>
+    <!-- /SCRIPTS -->
+</body>
+
+</html>

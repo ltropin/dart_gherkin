@@ -1,5 +1,7 @@
+import '../../gherkin.dart';
+
 /// Interface provides [serialize] objects to type [T]
-abstract class SerializableReporter<T> {
+abstract class SerializableReporter<T> implements Reporter {
   T serialize();
 }
 

@@ -23,6 +23,9 @@ class JsonStep {
   /// [StepExecutionResult] to string named
   String status;
 
+  /// Duration in millyseconds
+  int get durationMs => duration ~/ 1000000;
+
   JsonStep({
     required this.name,
     required this.line,

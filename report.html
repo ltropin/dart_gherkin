@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Report 2022-07-03 18:37:59.822509</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="https://cucumber.io/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="d-flex ms-2 flex-grow-1">
+            <div class="navbar-brand">
+                Cucumber <span class="lead">Dart</span>
+            </div>
+        </div>
+
+        <div class="row me-2">
+            <div class="col">
+                <div class="text-nowrap text-white">
+                    <h3>
+                        <div class="rounded bg-success p-1 px-2">
+                            Passed: <span id="passedCount"></span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-nowrap text-white">
+                    <h3>
+                        <div class="rounded bg-danger p-1 px-2">
+                            Failure: <span id="failureCount"></span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- /NAVBAR -->
+    <!-- CHARTS -->
+    <div class="container">
+        <div class="card-group shadow mt-3">
+            <div class="card">
+                <h5 class="card-header">
+                    Feature chart
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Total features: <span id="countFeatures"></span></li>
+                        <li class="list-group-item">Total time: 0:00:00.006000</li>
+                        <li class="list-group-item">Min time: 0:00:00.000000</li>
+                        <li class="list-group-item">Max time: 0:00:00.006000</li>
+                        <li class="list-group-item">Average time: 0:00:00.001000</li>
+                    </ul>
+                    <div id="fatureChart"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h5 class="card-header">
+                    Scenario chart
+                </h5>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Total scenarios: <span id="countScenarios"></span></li>
+                        <li class="list-group-item">Total time: 0:00:00.006000</li>
+                        <li class="list-group-item">Min time: 0:00:00.000000</li>
+                        <li class="list-group-item">Max time: 0:00:00.006000</li>
+                        <li class="list-group-item">Average time: 0:00:00.000000</li>
+                    </ul>
+                    <div id="scenarioChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /CHARTS -->
+
+    <!-- METADATA -->
+    
+    <div class="container mt-3">
+        <div class="accordion shadow" id="metadataAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Metadata
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#metadataAccordion">
+                    <div class="accordion-body">
+                        <dl class="row">
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                            <dt class="col-sm-3">Executed</dt>
+                            <dd class="col-sm-9">&quot;Windows 10 Pro&quot; 10.0 (Build 22000)</dd>
+                            
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- /METADATA -->
+
+    <!-- FEATURES -->
+    <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-7wAuVgwFnmFxc" role="button"
+                        aria-expanded="false" aria-controls="feature-7wAuVgwFnmFxc">
+                        
+                        <span class="badge bg-secondary">@a</span>
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator can work with strings</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-7wAuVgwFnmFxc">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests that the calculator can count the total value of the character code units in a string
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-TNT2vSlQE6eiT"
+                                    role="button" aria-expanded="false" aria-controls="scenario-TNT2vSlQE6eiT">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Counts string&#x27;s code units Examples: (1)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-TNT2vSlQE6eiT">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the characters &quot;abc&quot;
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">5ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are counted
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 294
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">1ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-hu0FAGPjBMdkM"
+                                    role="button" aria-expanded="false" aria-controls="scenario-hu0FAGPjBMdkM">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Counts string&#x27;s code units Examples: (2)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-hu0FAGPjBMdkM">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the characters &quot;a b c&quot;
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are counted
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 358
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-pVHWxnrqQMdJn"
+                                    role="button" aria-expanded="false" aria-controls="scenario-pVHWxnrqQMdJn">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Counts string&#x27;s code units Examples: (3)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-pVHWxnrqQMdJn">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the characters &quot;a \n b \c&quot;
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are counted
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 684
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-GHY5iNga2kPrQ" role="button"
+                        aria-expanded="false" aria-controls="feature-GHY5iNga2kPrQ">
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator with Background</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-GHY5iNga2kPrQ">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests the addition feature of the calculator
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-yO7XeQsOEK3rO"
+                                    role="button" aria-expanded="false" aria-controls="scenario-yO7XeQsOEK3rO">
+                                    
+                                    <span class="badge bg-secondary">@debug</span>
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers with background</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-yO7XeQsOEK3rO">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 100 and 50
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">And </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 150
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-cf0HrBqNriHeZ" role="button"
+                        aria-expanded="false" aria-controls="feature-cf0HrBqNriHeZ">
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-cf0HrBqNriHeZ">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests the addition of two numbers
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-ZL6L0KDkLUJPJ"
+                                    role="button" aria-expanded="false" aria-controls="scenario-ZL6L0KDkLUJPJ">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (1)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-ZL6L0KDkLUJPJ">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 12 and 5
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 17
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-QJDax3kagpvIm"
+                                    role="button" aria-expanded="false" aria-controls="scenario-QJDax3kagpvIm">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (2)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-QJDax3kagpvIm">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 20 and 5
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 25
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-MboouB56i1Hto"
+                                    role="button" aria-expanded="false" aria-controls="scenario-MboouB56i1Hto">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (3)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-MboouB56i1Hto">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 20937 and 1
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 20938
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-OPCPNC7DVPK2B"
+                                    role="button" aria-expanded="false" aria-controls="scenario-OPCPNC7DVPK2B">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (4)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-OPCPNC7DVPK2B">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 20.937 and -1.937
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 19
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-2CKx2ghK5vSSD" role="button"
+                        aria-expanded="false" aria-controls="feature-2CKx2ghK5vSSD">
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-2CKx2ghK5vSSD">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests the addition of powers of two feature of the calculator
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-2MJuzNJeTuLeR"
+                                    role="button" aria-expanded="false" aria-controls="scenario-2MJuzNJeTuLeR">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two number which are powers of two</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-2MJuzNJeTuLeR">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the powers 2^10 and 5^9
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 1954149
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-tf8zJ18FpuSvy" role="button"
+                        aria-expanded="false" aria-controls="feature-tf8zJ18FpuSvy">
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-tf8zJ18FpuSvy">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests the addition of two numbers
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-RKjDVgJSJ9qNV"
+                                    role="button" aria-expanded="false" aria-controls="scenario-RKjDVgJSJ9qNV">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (1)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-RKjDVgJSJ9qNV">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Gegeben </span>sei the numbers 12 and 5
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Wenn </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Dann </span>the expected result is 17
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-PLllGlHaZW9jr"
+                                    role="button" aria-expanded="false" aria-controls="scenario-PLllGlHaZW9jr">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (2)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-PLllGlHaZW9jr">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Gegeben </span>sei the numbers 20 and 5
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Wenn </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Dann </span>the expected result is 25
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-UvWWrSgHbhlLS"
+                                    role="button" aria-expanded="false" aria-controls="scenario-UvWWrSgHbhlLS">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (3)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-UvWWrSgHbhlLS">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Gegeben </span>sei the numbers 20937 and 1
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Wenn </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Dann </span>the expected result is 20938
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-N7Ot9y4Bm2pGq"
+                                    role="button" aria-expanded="false" aria-controls="scenario-N7Ot9y4Bm2pGq">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers Examples: (4)</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-N7Ot9y4Bm2pGq">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Gegeben </span>sei the numbers 20.937 and -1.937
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Wenn </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Dann </span>the expected result is 19
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header" data-bs-toggle="collapse" href="#feature-D3lplnfVj00q4" role="button"
+                        aria-expanded="false" aria-controls="feature-D3lplnfVj00q4">
+                        
+                        <div>
+                            <h5>
+                                Feature:
+                                <span class="fw-normal">Calculator</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="collapse" id="feature-D3lplnfVj00q4">
+                        <div class="card-body">
+                            <p class="card-text text-muted">
+                                Tests the addition feature of the calculator
+                            </p>
+                            
+                            <div class="card mb-1">
+                                <div class="card-header" data-bs-toggle="collapse" href="#scenario-JoVuR6MqM9lfv"
+                                    role="button" aria-expanded="false" aria-controls="scenario-JoVuR6MqM9lfv">
+                                    
+                                    <div>
+                                        <h5>
+                                            Scenario:
+                                            <span class="fw-normal">Add two numbers</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="scenario-JoVuR6MqM9lfv">
+                                    <ul class="list-group list-group-flush">
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Given </span>the numbers 1.5 and 2.1
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">When </span>they are added
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <div>
+                                                
+                                                <span class="badge bg-success">
+                                                    <i class="bi bi-check2"></i>
+                                                </span>
+                                                
+                                                
+                                                
+                                                <span class="text-primary">Then </span>the expected result is 3.6
+                                            </div>
+                                            <span class="badge bg-primary rounded-pill">0ms</span>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- /FEATURES -->
+
+    <!-- FOOTER -->
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a class="btn btn-outline-secondary" target="_blank" role="button" href="https://github.com/jonsamwell/dart_gherkin">
+                <i class="bi bi-github"></i>
+                GitHub
+            </a>
+
+            <a class="btn btn-outline-primary" target="_blank" href="https://pub.dev/packages/gherkin">
+                <i class="bi bi-box"></i>
+                Pub.dev
+            </a>
+            <a class="btn btn-outline-success" target="_blank" href="https://cucumber.io/docs/gherkin/reference/">
+                <i class="bi bi-code-slash"></i>
+                Cucumber
+            </a>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <script>
+        var dataFatures = [{
+            values: [6, 0, 0],
+            labels: ['Passed', 'Skipped', 'Failed'],
+            type: 'pie',
+            marker: {
+                colors: [
+                    '#4EA429',
+                    '#F0AD4E',
+                    '#BF3030',
+                ],
+            },
+        }];
+
+        var dataScenarios = [{
+            values: [14, 0, 0],
+            labels: ['Passed', 'Skipped', 'Failed'],
+            type: 'pie',
+            marker: {
+                colors: [
+                    '#4EA429',
+                    '#F0AD4E',
+                    '#BF3030',
+                ],
+            },
+        }];
+
+        var config = {
+            responsive: true
+        };
+
+        Plotly.newPlot('fatureChart', dataFatures, {}, config);
+
+        document.getElementById('countFeatures').textContent = dataFatures[0].values.reduce((a, b) => a + b, 0);
+        document.getElementById('passedCount').textContent = dataFatures[0].values[0];
+        document.getElementById('failureCount').textContent = dataFatures[0].values[1];
+
+        Plotly.newPlot('scenarioChart', dataScenarios, {}, config);
+        document.getElementById('countScenarios').textContent = dataScenarios[0].values.reduce((a, b) => a + b, 0);
+    </script>
+    <!-- /SCRIPTS -->
+</body>
+
+</html>

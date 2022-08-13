@@ -48,11 +48,12 @@ export 'src/io/io_feature_file_accessor.dart';
 // Process Handler
 export 'src/processes/process_handler.dart';
 export 'src/reporters/aggregated_reporter.dart';
+// Reporters
+export 'src/reporters/html_reporter.dart';
 export 'src/reporters/json/json_reporter.dart';
 export 'src/reporters/message_level.dart';
 export 'src/reporters/messages/messages.dart';
 export 'src/reporters/progress_reporter.dart';
-// Reporters
 export 'src/reporters/reporter.dart';
 export 'src/reporters/serializable_reporter.dart';
 export 'src/reporters/stdout_reporter.dart';

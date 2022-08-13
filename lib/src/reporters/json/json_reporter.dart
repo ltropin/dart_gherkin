@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:meta/meta.dart';
+
 import '../../../gherkin.dart';
 import 'json_feature.dart';
 import 'json_scenario.dart';
@@ -14,21 +16,22 @@ class JsonReporter
         ScenarioReporter,
         StepReporter,
         ExceptionReporter {
-  final List<JsonFeature> _features;
+  @protected
+  final List<JsonFeature> features;
   final String path;
   final WriteReportCallback? writeReport;
 
   JsonReporter({
     this.path = './report.json',
     this.writeReport,
-  }) : _features = [];
+  }) : features = [];
 
   JsonFeature get _currentFeature {
-    if (_features.isEmpty) {
-      _features.add(JsonFeature.empty);
+    if (features.isEmpty) {
+      features.add(JsonFeature.empty);
     }
 
-    return _features.last;
+    return features.last;
   }
 
   @override
@@ -38,7 +41,7 @@ class JsonReporter
   @override
   ReportActionHandler<FeatureMessage> get feature => ReportActionHandler(
         onStarted: ([message]) async =>
-            _features.add(JsonFeature.from(message!)),
+            features.add(JsonFeature.from(message!)),
       );
 
   @override
@@ -81,6 +84,6 @@ class JsonReporter
 
   @override
   String serialize() {
-    return json.encode(_features);
+    return json.encode(features);
   }
 }
